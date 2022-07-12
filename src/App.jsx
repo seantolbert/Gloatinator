@@ -19,10 +19,14 @@ function App() {
   return (
     <div className="h-screen flex justify-between items-center w-full">
       {stuff.map((item) => (
-        <div className="flex flex-col items-center">
-          <span className="h-20 w-20 bg-slate-400 rounded-md opacity-0"></span>
-          <span className="peer z-[10] h-4 w-4 bg-black rounded-full"></span>
-          <span className="h-20 w-20 bg-slate-400 rounded-md opacity-0 peer-hover:opacity-100 transition duration-300">date</span>
+        <div className="group flex flex-col items-center">
+          <span className="h-20 w-20 bg-slate-400 flex justify-center items-center rounded-md opacity-0 group-hover:opacity-100 transition duration-300 group-hover:-translate-y-5">
+            <img src="https://i.imgur.com/M4mu25f.png" alt="" className=""/>
+          </span>
+          <span className="peer z-[10] h-4 w-4 bg-black rounded-full hover:h-6 hover:w-6 transition-all duration-300"></span>
+          <span className="h-20 w-20 bg-slate-400 group-hover:translate-y-5 rounded-md opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
+            date
+          </span>
         </div>
       ))}
       <span className="absolute w-full bg-black h-1"></span>
